@@ -50,7 +50,7 @@ const submitForm = () => {
 <template>
   <section id="contact" class="contact-section">
     <h1>Contact me</h1>
-    
+    <p>If you wish to contact me feel free to do so using this contact form or send an email at <span class="mail">mihic.dev@gmail.com</span></p>
     <form @submit.prevent="submitForm" class="contact-form">
       <div class="form-group">
         <label for="name">Name</label>
@@ -66,16 +66,33 @@ const submitForm = () => {
         <label for="message">Message</label>
         <textarea v-model="message" id="message" rows="5" placeholder="Your message"></textarea>
       </div>
-
+  <!-- message box: reserved space so layout doesn't shift -->
+      <div class="form-messages" aria-live="polite">
+        <p class="error" v-show="error">{{ error }}</p>
+        <p class="success" v-show="submitted">Thank you! Your message has been sent.</p>
+      </div>
       <button class="submit" type="submit">Send</button>
 
-      <p v-if="error" class="error">{{ error }}</p>
-      <p v-if="submitted" class="success">Thank you! Your message has been sent.</p>
+      
     </form>
   </section>
 </template>
 
 <style scoped>
+
+/* reserve fixed area for messages so button never moves */
+.form-messages {
+  min-height: 1.6rem; /* adjust to match one line of text (or use height) */
+  display: flex;
+  align-items: center;   /* vertically center message inside reserved area */
+  justify-content: center; /* center horizontally */
+  margin-bottom: 0.5rem; /* small gap from messages to button */
+  transition: opacity 0.2s ease;
+}
+
+.mail {
+  color: #FFF4B7;
+}
 .contact-section {
   display: flex;             /* make it flex */
   flex-direction: column;    /* stack items vertically */
@@ -155,11 +172,13 @@ button[type="submit"]:hover {
 .error {
   color: #ff6b6b;
   font-weight: 500;
+
 }
 
 .success {
   color: #a0ffcc;
   font-weight: 500;
+
 }
 
 @media (max-width: 768px)

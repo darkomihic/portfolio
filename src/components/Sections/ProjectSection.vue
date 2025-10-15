@@ -45,13 +45,13 @@ const projects = [
     description: "My own portfolio website. The one you are currently looking at.",
     image: "/images/portfolio.png",
     tags: ["Vue"],
-    link: "https://example.com/inventory",
+    link: "https://mihic.dev",
   },
   {
     id: 4,
     title: "Hackathon project",
     description: "Cyrillic CMS Challenge, a hackathon dedicated to building innovative Content Management Services tailored specifically for Serbian Cyrillic alphabet content.",
-    image: "/images/portfolio.png",
+    image: "/images/hackathon.png",
     tags: ["Node.js", "React"],
     link: "https://github.com/davidrosic/Cokolada",
   },
@@ -59,9 +59,9 @@ const projects = [
     id: 5,
     title: "University project",
     description: "Java Swing application for drawing 2D geometric shapes. Made for an university project. Project was used for the Design Patterns course",
-    image: "/images/portfolio.png",
+    image: "/images/designpatterns.png",
     tags: ["Java"],
-    link: "https://github.com/davidrosic/Cokolada",
+    link: "https://github.com/darkomihic/designpatternsproject",
   }
 ];
 </script>
