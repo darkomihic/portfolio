@@ -80,9 +80,9 @@ h2 {
   text-align: center;
 }
 
-  h1{
-    font-size: 3rem;
-  }
+h1{
+  font-size: 3rem;
+}
 
 .projects-list {
   display: flex;
@@ -92,9 +92,9 @@ h2 {
   max-width: 800px; /* optional: limits how wide they can go */
 }
 
-@media(max-width: 768px){
+@media(max-width: 820px){
   h1{
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 </style>

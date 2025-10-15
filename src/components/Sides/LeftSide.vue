@@ -99,7 +99,7 @@ onUnmounted(() => {
 
 }
 
-@media (max-width: 768px)
+@media (max-width: 820px)
 {
   .left-panel{
     display: none;
@@ -114,20 +114,20 @@ onUnmounted(() => {
 }
 
 .nav-bullets {
-  position: relative;
   display: flex;
   flex-direction: column;
-  left: 40%;
-  align-items: flex-start;
+  align-items: center; /* centers the bullets horizontally */
   gap: 1.5rem;
   padding: 0;
+  margin: 0 auto; /* centers within the left panel */
 }
+
 
 .nav-bullets li {
   display: flex;
   align-items: center;
+  justify-content: center; /* makes sure bullet+label stay centered together */
   gap: 0.5rem;
-  cursor: pointer;
 }
 
 .bullet-wrapper {

@@ -52,7 +52,7 @@ import ProjectSection from '../Sections/ProjectSection.vue';
 }
 
 
-@media (max-width: 768px)
+@media (max-width: 820px)
 {
   .right-panel {
     position: relative; /* remove fixed positioning */
@@ -75,7 +75,7 @@ import ProjectSection from '../Sections/ProjectSection.vue';
 
 /* ✅ Section spacing control */
 .section {
-  padding-bottom: 4rem; /* space between sections */
+  padding-bottom: 2rem; /* space between sections */
 }
 
 /* Optional: remove default margins from inner elements */

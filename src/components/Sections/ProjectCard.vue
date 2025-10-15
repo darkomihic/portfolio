@@ -58,7 +58,7 @@ defineProps({
 img {
   width: 10%;
   height: 30%; /* Fixed height */
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   flex-shrink: 0;
   padding: 4rem;
@@ -122,22 +122,19 @@ a:hover {
   font-weight: 600;
   font-style: italic;
   padding: 0.5rem 1rem;
-  background: #fff1a3;
-  border: 1px solid #cabf7f;
-  border-radius: 0.5rem;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-@media(max-width: 768px){
+@media(max-width: 820px){
   h3 {
     font-size: 1.1rem;
   }
   
   .project-card {
     flex-direction: column;
-    padding: 1rem;
+    padding: 0rem;
   }
   
   img {

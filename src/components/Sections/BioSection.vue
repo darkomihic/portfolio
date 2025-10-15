@@ -24,15 +24,19 @@ h1{
   font-size: 3rem;
 }
 
-@media (max-width: 768px)
+@media (max-width: 820px)
 {
   .section{
     font-size: 1rem;
+    padding: 0rem;
+    padding-top: 2rem;
   }
 
   h1{
-    font-size: 3rem;
+    font-size: 2rem;
   }
+
+
  
 }
 </style>

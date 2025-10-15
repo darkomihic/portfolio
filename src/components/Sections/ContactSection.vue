@@ -123,6 +123,7 @@ h1{
   gap: 1.5rem;
   max-width: 600px;
   width: 100%;
+  padding-bottom: 4rem;
 }
 
 .form-group {
