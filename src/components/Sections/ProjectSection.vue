@@ -81,7 +81,7 @@ h2 {
 }
 
 h1{
-  font-size: 3rem;
+  font-size: 6rem;
 }
 
 .projects-list {

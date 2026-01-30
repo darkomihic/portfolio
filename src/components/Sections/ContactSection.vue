@@ -108,12 +108,15 @@ const submitForm = () => {
 
 
 h1{
-  font-size: 3rem;
+  font-size: 6rem;
 }
 
+p{
+  font-size: 1.5rem;
+}
 
 .contact-section h1 {
-  font-size: 2.5rem;
+  font-size: 6rem;
   margin-bottom: 2rem;
 }
 
@@ -140,6 +143,7 @@ h1{
 .form-group label {
   margin-bottom: 0.5rem;
   font-weight: 500;
+  font-size: 1.5rem;
 }
 
 .form-group input,
@@ -149,6 +153,10 @@ h1{
   border: none;
   outline: none;
   font-size: 1rem;
+  border-radius: 1rem;
+
+  
+  
 }
 
 .form-group input {
@@ -158,7 +166,7 @@ h1{
 button[type="submit"] {
   padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   background-color: #FFF4B7;
   color: #000B58;
   font-weight: bold;
@@ -192,10 +200,26 @@ button[type="submit"]:hover {
     gap: 1.5rem;
     width: 70%;
     margin-bottom: 3rem;
-}
+  }
+
+  .contact-section h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  p{
+    font-size: 1.1rem;
+  }
+
 
   h1{
-    font-size: 3rem;
+    font-size: 1rem;
   }
 }
 </style>

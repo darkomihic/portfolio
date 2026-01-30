@@ -1,25 +1,30 @@
 <script setup lang="ts">
-import CursorLight from './components/CursorLight.vue'
-import LeftSide from './components/Sides/LeftSide.vue'
-import RightSide from './components/Sides/RightSide.vue'
+import { ref } from 'vue'
+import Navbar from './components/Navbar.vue'
+import MainContent from './components/MainContent.vue'
+
+const activeSection = ref('bio')
+
+const switchSection = (sectionId: string) => {
+  activeSection.value = sectionId
+}
 </script>
 
 <template>
-  <!-- 💡 wrapper holds everything -->
   <div class="page-wrapper">
-    <LeftSide />
-    <RightSide />
+    <Navbar :activeSection="activeSection" @switch-section="switchSection" />
+    <MainContent :activeSection="activeSection" />
   </div>
 </template>
 
 <style scoped>
 .page-wrapper {
-  position: fixed;        /* 👈 Sticks to viewport regardless of scroll */
+  position: fixed;        
   top: 0;
   left: 0;
-  width: 100vw;           /* Full viewport width */
-  height: 100vh;          /* Full viewport height */
-  z-index: 0;             /* Behind other content */
+  width: 100vw;           
+  height: 100vh;          
+  z-index: 0;             
 
   display: flex;
   overflow: hidden;

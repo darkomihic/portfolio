@@ -41,48 +41,47 @@ defineProps({
 
 <style scoped>
 .project-card {
-  display: flex;
-  align-items: center;
-  background: #FFF4B7;
-  border-radius: 3rem;
-  overflow: hidden;
-  transition: transform 0.3s, background 0.3s;
-  color: #000B58;
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #FFF4B7;
+  transition: transform 0.3s ease, background 0.3s ease;
+  width: 100%;
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
-  background: #ffed86;
+  transform: translateY(-5px);
+  background: #fff4b770;
 }
 
 img {
-  width: 10%;
-  height: 30%; /* Fixed height */
-  object-fit: contain;
+  width: 15%;
+  height: 50%; /* Fixed height */
   object-position: center;
   flex-shrink: 0;
-  padding: 4rem;
+  padding: 1rem 1rem 0.3rem 1rem;
 }
+
 .content {
-  padding: 0.25rem;
   flex: 1;
 }
 
 h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+  margin: 0;
 }
 
 p {
-  margin-bottom: 1rem;
-  opacity: 0.9;
+  margin-bottom: 0.5rem;
+  padding: 0rem 2rem;
+  font-size: 1.5rem;
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1rem;
   list-style: none;
   padding: 0;
   justify-content: center;
@@ -92,13 +91,14 @@ p {
   background: #003161;
   padding: 0.3rem 0.8rem;
   border-radius: 0.5rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #FFF4B7;
 }
 
 .project-link {
   display: flex;
   justify-content: center;
+  padding: 0.5rem;
 }
 
 a {
@@ -121,31 +121,56 @@ a:hover {
   color: #000B58;
   font-weight: 600;
   font-style: italic;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: 1.2rem;
 }
 
 @media(max-width: 820px){
   h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
-  
+
+  p {
+    font-size: 0.9rem;
+    padding: 0rem 1rem;
+  }
+
   .project-card {
     flex-direction: column;
     padding: 0rem;
   }
-  
+
   img {
     width: 20%;
     height: 20%;
     margin: 0;
     padding: 1rem;
   }
-  
+
   .content {
     padding: 0rem;
+  }
+
+  .tags li {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .project-link {
+    padding: 0.25rem;
+  }
+
+  a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .in-development {
+    font-size: 1rem;
+    padding: 0.4rem;
   }
 }
 </style>
