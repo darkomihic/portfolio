@@ -12,8 +12,10 @@ const goToContact = () => {
       <!-- Profile Header -->
       <div class="profile-header">
         <div class="profile-image">
+          <h2 class="name-mobile">Darko Mihić</h2>
           <!-- Add your photo here - replace the src path -->
-          <img src="/public/darko2.PNG" alt="Your Name" />
+          <img src="/public/darko2.PNG" alt="Darko Mihić" />
+          <h2 class="name-desktop">Darko Mihić</h2>
         </div>
         <div class="bio-text">
           <h1>About me</h1>
@@ -86,6 +88,25 @@ const goToContact = () => {
 
 .profile-image {
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name-desktop {
+  font-size: 2rem;
+  color: #FFF4B7;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.name-mobile {
+  display: none;
+  font-size: 1.8rem;
+  color: #FFF4B7;
+  margin-bottom: 0rem;
+  text-align: center;
 }
 
 .profile-image img {
@@ -95,7 +116,7 @@ const goToContact = () => {
   object-fit: cover;
   border: 4px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .bio-text {
@@ -203,6 +224,14 @@ const goToContact = () => {
   .profile-image img {
     width: 150px;
     height: 150px;
+  }
+
+  .name-desktop {
+    display: none;
+  }
+
+  .name-mobile {
+    display: block;
   }
 
   .bio-text h1 {

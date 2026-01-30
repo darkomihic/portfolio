@@ -1,5 +1,5 @@
 <template>
-  <div class="main-content">
+  <div class="main-content" ref="mainContentRef">
     <!-- Single section display -->
     <transition name="fade" mode="out-in">
       <div :key="props.activeSection" class="section-container">
@@ -13,10 +13,13 @@
 </template>
 
 <script setup>
+import { ref, watch } from 'vue';
 import BioSection from './Sections/BioSection.vue';
 import ProjectSection from './Sections/ProjectSection.vue';
 import ExperienceSection from './Sections/ExperienceSection.vue';
 import ContactSection from './Sections/ContactSection.vue';
+
+const mainContentRef = ref(null);
 
 const props = defineProps({
   activeSection: {
@@ -26,6 +29,13 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['switch-section'])
+
+// Scroll to top when section changes
+watch(() => props.activeSection, () => {
+  if (mainContentRef.value) {
+    mainContentRef.value.scrollTo({ top: 0, behavior: 'instant' });
+  }
+})
 </script>
 
 <style scoped>
