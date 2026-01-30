@@ -13,7 +13,7 @@ const switchSection = (sectionId: string) => {
 <template>
   <div class="page-wrapper">
     <Navbar :activeSection="activeSection" @switch-section="switchSection" />
-    <MainContent :activeSection="activeSection" />
+    <MainContent :activeSection="activeSection" @switch-section="switchSection" />
   </div>
 </template>
 

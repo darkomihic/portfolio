@@ -25,7 +25,7 @@ const projects = [
   {
     id: 1,
     title: "Kosa-Nostra Barber Shop Website",
-    description: "Website built for a local barbershop. Includes online scheduling, barber dashboard and integrated Google calendar",
+    description: "Website built for a local barbershop. Includes online scheduling, barber dashboard and integrated Google calendar. Supports multiple barbers with different working hours. Currently working on a Telegram bot for appointment notifications.",
     image: '/images/KNGlava.png', // Direct public path     
     tags: ["Node.js", "React", "MySQL", "Tailwind"],
     link: "https://kosa-nostra.com",
@@ -33,7 +33,7 @@ const projects = [
   {
     id: 2,
     title: "Mobile Unity Game",
-    description: "A mobile pixel-art endless runner made in Unity. With different different types of enemy mobs, levels and bosses. Pre-Alpha is out.",
+    description: "A mobile pixel-art endless runner made in Unity. With different types of enemy mobs, levels and bosses. Pre-Alpha is out.",
     image: "/images/ninja.png",
     tags: ["Unity", "C#", "Mobile"],
     inDevelopment: true
@@ -50,7 +50,7 @@ const projects = [
   {
     id: 4,
     title: "Hackathon project",
-    description: "Cyrillic CMS Challenge, a hackathon dedicated to building innovative Content Management Services tailored specifically for Serbian Cyrillic alphabet content.",
+    description: "Cyrillic CMS Challenge, a hackathon dedicated to building innovative Content Management Services tailored specifically for Serbian Cyrillic alphabet content. Worked alongside 2 other developers with a 48 hour time limit.",
     image: "/images/hackathon.png",
     tags: ["Node.js", "React"],
     link: "https://github.com/davidrosic/Cokolada",
@@ -58,7 +58,7 @@ const projects = [
   {
     id: 5,
     title: "University project",
-    description: "Java Swing application for drawing 2D geometric shapes. Made for an university project. Project was used for the Design Patterns course",
+    description: "Java Swing application for drawing 2D geometric shapes. Made for a university project. Project was used for the Design Patterns course.",
     image: "/images/designpatterns.png",
     tags: ["Java"],
     link: "https://github.com/darkomihic/designpatternsproject",

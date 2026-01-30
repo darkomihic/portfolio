@@ -56,13 +56,22 @@
 
 <script setup>
 const workExperience = [
+    {
+    id: 3,
+    title: "Consultant",
+    company: "Kodland",
+    link: "https://www.kodland.org/",
+    date: "Dec 2025 - Present",
+    description: "Providing guidance and support tutors at Kodland. Assisting with curriculum development and ensuring high-quality teaching standards are maintained. I have also led several workshops about the course updates and pedagogical techniques. Currently updating the course materials to match the new IDE features and UI.",
+    technologies: ["Lua", "Game Dev", "Python"]
+  },
   {
     id: 1,
     title: "Tutor",
     company: "Kodland",
     link: "https://www.kodland.org/",
     date: "Aug 2025 - Present",
-    description: "Brief description of your role and responsibilities. What you accomplished and what you worked on.",
+    description: "Teaching programming to kids aged 8-14. Focus on game development using Lua in Roblox Studio. Helping students understand programming concepts through interactive projects and games.",
     technologies: ["Lua", "Game Dev", "Python"]
   },
   {
@@ -72,17 +81,24 @@ const workExperience = [
     link: "foobar.rs",
     date: "Apr 2025 - July 2025",
     description: "Internship at FooBar where I learned Laravel and Vue.js. Very valuable experience at the start of my career where I learned how to write better, more sustainable code from a great mentor.",
-    technologies: ["Laravel", "Vue.js"]
+    technologies: ["Laravel", "Vue", "PHP"]
   }
 ];
 
 const education = [
   {
     id: 1,
-    degree: "Bachelor of Science in Computer Science",
+    degree: "Bachelor of Information Systems Engineering",
     school: "Faculty of Technical Sciences, University of Novi Sad",
     date: "2020 - Present",
-    description: "Last-year student focused on software development, information systems, and database modeling."
+    description: "Final-year student of Information Systems Engineering. At university I have learned a lot about databases, web development, software engineering principles and more. I am currently working on my final thesis.",
+  },
+    {
+    id: 2,
+    degree: "Computer Technician",
+    school: "Electrotechnical School 'Mihajlo Pupin', Novi Sad",
+    date: "2016 - 2020",
+    description: "Graduated with honors in Computer Technician program. Gained foundational knowledge in hardware, software, and networking.",
   }
 ];
 </script>

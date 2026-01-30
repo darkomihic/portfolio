@@ -34,7 +34,7 @@ const submitForm = () => {
     .then(() => {
       submitted.value = true;
       name.value = email.value = message.value = '';
-    }, (err) => {
+    }, () => {
       error.value = 'Failed to send message. Try again later.';
     })
 
@@ -50,7 +50,8 @@ const submitForm = () => {
 <template>
   <section id="contact" class="contact-section">
     <h1>Contact me</h1>
-    <p>If you wish to contact me feel free to do so using this contact form or send an email at <span class="mail">mihic.dev@gmail.com</span></p>
+    <p>If you wish to contact me, feel free to do so using this contact form or send an email at <span class="mail">mihic.dev@gmail.com</span></p>
+    <p class="social-links">You can also find me on <a href="https://www.linkedin.com/in/darko-mihic/" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a href="https://github.com/darkomihic" target="_blank" rel="noopener noreferrer">GitHub</a></p>
     <form @submit.prevent="submitForm" class="contact-form">
       <div class="form-group">
         <label for="name">Name</label>
@@ -93,6 +94,18 @@ const submitForm = () => {
 .mail {
   color: #FFF4B7;
 }
+
+.social-links a {
+  color: #FFF4B7;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.social-links a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
 .contact-section {
   display: flex;             /* make it flex */
   flex-direction: column;    /* stack items vertically */

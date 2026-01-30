@@ -3,7 +3,7 @@
     <!-- Single section display -->
     <transition name="fade" mode="out-in">
       <div :key="props.activeSection" class="section-container">
-        <BioSection v-if="props.activeSection === 'bio'" />
+        <BioSection v-if="props.activeSection === 'bio'" @switch-section="emit('switch-section', $event)" />
         <ProjectSection v-else-if="props.activeSection === 'projects'" />
         <ExperienceSection v-else-if="props.activeSection === 'experience'" />
         <ContactSection v-else-if="props.activeSection === 'contact'" />
@@ -24,6 +24,8 @@ const props = defineProps({
     required: true
   }
 })
+
+const emit = defineEmits(['switch-section'])
 </script>
 
 <style scoped>
