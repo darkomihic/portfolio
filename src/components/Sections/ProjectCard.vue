@@ -3,7 +3,7 @@
     <img v-if="image" :src="image" :alt="title" />
     <div class="content">
       <h3>{{ title }}</h3>
-      <p>{{ description }}</p>
+      <p v-html="description"></p>
       <ul class="tags">
         <li v-for="tag in tags" :key="tag">{{ tag }}</li>
       </ul>
@@ -76,6 +76,10 @@ p {
   margin-bottom: 0.5rem;
   padding: 0rem 2rem;
   font-size: 1.5rem;
+}
+
+p :deep(a) {
+  color: #FFF4B7;
 }
 
 .tags {

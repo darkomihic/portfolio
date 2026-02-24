@@ -41,6 +41,22 @@ const projects = [
   },
   {
     id: 3,
+    title: "Mokra Gora Apartments",
+    description: 'Working on optimizing an already built website for apartments in Mokra Gora. The website contains 360° pictures and multiple videos. Originally built by <a href="https://www.linkedin.com/in/vuk-stojic/">Vuk Stojić</a> and <a href="https://www.linkedin.com/in/danilo-radivojevic-441351256/" target="_blank">Danilo Radivojević</a>.',
+    image: "/images/cabin.png",
+    tags: ["Next.js"],
+    inDevelopment: true
+  },
+  {
+    id: 4,
+    title: "ReFocus",
+    description: "Website built for a group of young students to bring their business idea to life. They are making 3D printed keychains to help kids find their lost keys, all while using recycled plastic.",
+    image: "/images/Refocus.png",
+    tags: ["React", "Node.js", "MySQL"],
+    inDevelopment: true
+  },
+    {
+    id: 5,
     title: "Portfolio website",
     description: "My own portfolio website. The one you are currently looking at.",
     image: "/images/portfolio.png",
@@ -48,7 +64,7 @@ const projects = [
     link: "https://mihic.dev",
   },
   {
-    id: 4,
+    id: 6,
     title: "Hackathon project",
     description: "Cyrillic CMS Challenge, a hackathon dedicated to building innovative Content Management Services tailored specifically for Serbian Cyrillic alphabet content. Worked alongside 2 other developers with a 48 hour time limit.",
     image: "/images/hackathon.png",
@@ -56,7 +72,7 @@ const projects = [
     link: "https://github.com/davidrosic/Cokolada",
   },
   {
-    id: 5,
+    id: 7,
     title: "University project",
     description: "Java Swing application for drawing 2D geometric shapes. Made for a university project. Project was used for the Design Patterns course.",
     image: "/images/designpatterns.png",
@@ -83,6 +99,7 @@ h2 {
 h1{
   font-size: 6rem;
 }
+
 
 .projects-list {
   display: flex;
