@@ -50,10 +50,10 @@ const projects = [
   {
     id: 4,
     title: "ReFocus",
-    description: "Website built for a group of young students to bring their business idea to life. They are making 3D printed keychains to help kids find their lost keys, all while using recycled plastic.",
-    image: "/images/Refocus.png",
+    description: "Website built for a group of young students to bring their business idea to life. They are making 3D printed keychains to help kids find their lost keys, all while using recycled plastic. The MVP is live.",
+    image: "/images/ReFocus.png",
     tags: ["React", "Node.js", "MySQL"],
-    inDevelopment: true
+    link: "https://www.refocusco.rs/"
   },
     {
     id: 5,

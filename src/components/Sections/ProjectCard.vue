@@ -42,7 +42,7 @@ defineProps({
 <style scoped>
 .project-card {
   flex: 1;
-  background: rgba(255, 255, 255, 0.1);
+  background: #fff4b7c0;
   padding: 0rem;
   border-radius: 0.5rem;
   border: 0.1rem solid #FFF4B7;
@@ -52,7 +52,7 @@ defineProps({
 
 .project-card:hover {
   transform: translateY(-5px);
-  background: #fff4b770;
+  background: #FFF4B7;
 }
 
 img {
@@ -70,16 +70,21 @@ img {
 h3 {
   font-size: 2.2rem;
   margin: 0;
+  color: #003161;
+
 }
 
 p {
   margin-bottom: 0.5rem;
   padding: 0rem 2rem;
   font-size: 1.5rem;
+  color: #003161;
+
 }
 
 p :deep(a) {
-  color: #FFF4B7;
+  color: #003161;
+  font-weight: 900;
 }
 
 .tags {
