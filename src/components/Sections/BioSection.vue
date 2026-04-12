@@ -36,20 +36,21 @@ const goToContact = () => {
       <!-- Status Cards -->
       <div class="status-cards">
         <div class="card opportunities">
-          <div class="card-icon">💼</div>
-          <h3>Seeking Opportunities</h3>
+          <div class="card-icon">🤝</div>
+          <h3>Open to Freelance</h3>
           <p>
-            Currently looking for full-time positions and internship opportunities in software development,
-            particularly in web technologies and system design.
+            Currently freelancing full-time, but open to additional freelance opportunities — especially web projects,
+            custom applications, or consulting. Use the <a @click="goToContact" class="contact-link">contact form</a> to reach out and let's see if we're a good fit.
           </p>
         </div>
 
         <div class="card freelance">
-          <div class="card-icon">💻</div>
-          <h3>Available for Projects</h3>
+          <div class="card-icon">🔨</div>
+          <h3>Currently Building</h3>
           <p>
-            Open to freelance work! Need a portfolio, business website, or custom web application?
-            Let's collaborate and bring your ideas to life. Use the <a @click="goToContact" class="contact-link">contact form</a> on this site to get in touch.
+            Working on Shipbling, a Singapore-based e-commerce platform — engineering a multi-store sync system between Shopify and Shopee,
+            covering product publishing, order ingestion, and real-time inventory updates.
+            Also finishing my bachelor's thesis.
           </p>
         </div>
       </div>
