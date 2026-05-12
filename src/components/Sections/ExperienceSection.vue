@@ -69,7 +69,7 @@ const workExperience = [
     title: "Consultant",
     company: "Kodland",
     link: "https://www.kodland.org/",
-    date: "Dec 2025 - Present",
+    date: "Dec 2025 - May 2026",
     description: "Providing guidance and support tutors at Kodland. Assisting with curriculum development and ensuring high-quality teaching standards are maintained. I have also led several workshops about the course updates and pedagogical techniques. Currently updating the course materials to match the new IDE features and UI.",
     technologies: ["Lua", "Game Dev", "Python"]
   },
