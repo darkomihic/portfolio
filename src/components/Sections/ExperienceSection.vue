@@ -56,7 +56,15 @@
 
 <script setup>
 const workExperience = [
-    {
+  {
+    id: 4,
+    title: "Full Stack Web Developer",
+    company: "Self-employed",
+    date: "Mar 2026 - Present",
+    description: "Developing core backend integrations for Shipbling, a Singapore-based e-commerce platform in the gold and jewelry space. Engineering a multi-store sync system connecting Shopify and Shopee, covering product publishing, order ingestion, and real-time inventory updates. Working across the full stack — React dashboard, Node.js/Express API, PostgreSQL — with production deployments on DigitalOcean.",
+    technologies: ["React", "Node.js", "Express", "PostgreSQL", "DigitalOcean"]
+  },
+  {
     id: 3,
     title: "Consultant",
     company: "Kodland",
