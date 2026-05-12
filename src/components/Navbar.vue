@@ -12,7 +12,7 @@ const sections = [
   { id: "bio", label: "Darko" },
   { id: "projects", label: "Projects" },
   { id: "experience", label: "Experience" },
-  { id: "contact", label: "Contact" },
+  { id: "tutoring", label: "Tutoring" },
 ];
 
 const switchSection = (id) => {

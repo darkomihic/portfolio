@@ -3,6 +3,9 @@ import ContactSection from './ContactSection.vue';
 
 const emit = defineEmits(['switch-section'])
 
+const goToContact = () => {
+  emit('switch-section', 'contact')
+}
 </script>
 
 <template>
@@ -10,24 +13,14 @@ const emit = defineEmits(['switch-section'])
     <div class="bio-container">
       <!-- Profile Header -->
       <div class="profile-header">
-        <div class="profile-image">
-          <h2 class="name-mobile">Darko Mihić</h2>
-          <!-- Add your photo here - replace the src path -->
-          <img src="/public/darko2.PNG" alt="Darko Mihić" />
-          <h2 class="name-desktop">Darko Mihić</h2>
-        </div>
         <div class="bio-text">
-          <h1>About me</h1>
+          <h1>Tutoring</h1>
           <p>
-            Final-year student at the Faculty of Technical Sciences, University of Novi Sad, eager to grow as a software developer.
-            I am particularly interested in building information systems, exploring different web technologies, modeling databases, and data analysis.
-            I am flexible, a strong team player, and equally effective working independently.
-            I also have experience working remotely and thrive in environments with motivated colleagues and experienced mentors for professional growth.
+            I have a strong passion towards teaching. For the past year I have been teaching at an online school and also offer my own private sessions. I have experience working with students ages 8-15 and also SEN students. I have experience in many programming languages, including C#, Java, JavaScript, C, etc. However, for the younger learners I recommend learning <a href="https://www.scratchfoundation.org/home" target="_blank" rel="noopener noreferrer" class="contact-link">Scratch</a>.
           </p>
           <p class="personal-note">
             <!-- Add personal details here - customize this section -->
-            Based in Novi Sad, Serbia. When I'm not coding, I enjoy playing sports, especially basketball, and I also like hiking. I'm also an avid gamer, which naturally led me to explore game development.
-            I love working on challenging projects, I always have something that I'm building. I believe that building is the best way to learn and improve my skills. Also, I love sharing my knowledge with others, whether it be through tutoring or working alongside others on projects.
+             Coming from a family with a background in education I have had the chance to learn from amazing teachers and I use all of that knowledge in my lessons. My main goal is to showcase all of the amazing details in programming to the young learners, making them interested and willing to learn from lesson to lesson.
           </p>
         </div>
       </div>
@@ -35,30 +28,27 @@ const emit = defineEmits(['switch-section'])
       <!-- Status Cards -->
       <div class="status-cards">
         <div class="card opportunities">
-          <div class="card-icon">💼</div>
-          <h3>Seeking Opportunities</h3>
+          <div class="card-icon">🐱</div>
+          <h3>Scratch Course</h3>
           <p>
-            Currently looking for full-time positions and internship opportunities in software development,
-            particularly in web technologies and system design.
+            I am currently building my own <a href="https://www.scratchfoundation.org/home" target="_blank" rel="noopener noreferrer" class="contact-link">Scratch</a> course! I recommend this course to all of the young students who don't have any experience, as it is an amazing language meant for them.
           </p>
         </div>
 
         <div class="card freelance">
-          <div class="card-icon">💻</div>
-          <h3>Available for Projects</h3>
+          <div class="card-icon">🏫</div>
+          <h3>Personalized lessons</h3>
           <p>
-            Open to freelance work! Need a portfolio, business website, or custom web application?
-            Let's collaborate and bring your ideas to life. Use the contact form below to get in touch.
+            Do you want to learn a specific language? I offer personalized lessons catered to each student. Ranging from the basics of coding, web development and even game development in Unity or Roblox Studio.
           </p>
         </div>
       </div>
     </div>
-    <div class="contact-text">
-      <p>If you wish to contact me, feel free to do so using this contact form or send an email at <span class="mail">mihic.dev@gmail.com</span></p>
-      <p class="social-links">You can also find me on <a href="https://www.linkedin.com/in/darko-mihic/" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a href="https://github.com/darkomihic" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-    </div>
   </section>
-  
+  <div class="contact-text">
+    <p>If you are interested in my tutoring services you can use the contact form or send an email at <span class="mail">mihic.dev@gmail.com</span></p>
+    <p>You can also find me on <a href="https://www.superprof.rs/web-developer-iskustvom-radu-decom-mladima-casovima-fokusiram-programiranje-postane-nesto-sto-stvarno-vole.html" target="_blank" rel="noopener noreferrer"><span class="mail">Superprof</span></a></p>
+  </div>
   <ContactSection>
 
   </ContactSection>
@@ -68,6 +58,7 @@ const emit = defineEmits(['switch-section'])
 
 .contact-text {
   margin-top: 6rem;
+  font-size: 1.5rem;
 }
 
 .section {
@@ -119,6 +110,10 @@ const emit = defineEmits(['switch-section'])
   color: #FFF4B7;
   margin-bottom: 0rem;
   text-align: center;
+}
+
+.mail {
+  color: #FFF4B7;
 }
 
 .profile-image img {

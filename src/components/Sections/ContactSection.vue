@@ -49,9 +49,7 @@ const submitForm = () => {
 
 <template>
   <section id="contact" class="contact-section">
-    <h1>Contact me</h1>
-    <p>If you wish to contact me, feel free to do so using this contact form or send an email at <span class="mail">mihic.dev@gmail.com</span></p>
-    <p class="social-links">You can also find me on <a href="https://www.linkedin.com/in/darko-mihic/" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a href="https://github.com/darkomihic" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+    
     <form @submit.prevent="submitForm" class="contact-form">
       <div class="form-group">
         <label for="name">Name</label>

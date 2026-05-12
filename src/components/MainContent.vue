@@ -6,7 +6,7 @@
         <BioSection v-if="props.activeSection === 'bio'" @switch-section="emit('switch-section', $event)" />
         <ProjectSection v-else-if="props.activeSection === 'projects'" />
         <ExperienceSection v-else-if="props.activeSection === 'experience'" />
-        <ContactSection v-else-if="props.activeSection === 'contact'" />
+        <TutoringSection v-else-if="props.activeSection === 'tutoring'" />
       </div>
     </transition>
   </div>
@@ -17,7 +17,7 @@ import { ref, watch } from 'vue';
 import BioSection from './Sections/BioSection.vue';
 import ProjectSection from './Sections/ProjectSection.vue';
 import ExperienceSection from './Sections/ExperienceSection.vue';
-import ContactSection from './Sections/ContactSection.vue';
+import TutoringSection from './Sections/TutoringSection.vue';
 
 const mainContentRef = ref(null);
 
