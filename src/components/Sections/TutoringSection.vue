@@ -47,7 +47,6 @@ const goToContact = () => {
   </section>
   <div class="contact-text">
     <p>If you are interested in my tutoring services you can use the contact form or send an email at <span class="mail">mihic.dev@gmail.com</span></p>
-    <p>You can also find me on <a href="https://www.superprof.rs/web-developer-iskustvom-radu-decom-mladima-casovima-fokusiram-programiranje-postane-nesto-sto-stvarno-vole.html" target="_blank" rel="noopener noreferrer"><span class="mail">Superprof</span></a></p>
   </div>
   <ContactSection>
 
