@@ -12,6 +12,7 @@
         :tags="project.tags"
         :link="project.link"
         :inDevelopment="project.inDevelopment"
+        :sprite="project.sprite"
       />
     </div>
     <p>You can check out my other projects on my <a href="https://github.com/darkomihic">GitHub</a> page.</p>
@@ -34,9 +35,10 @@ const projects = [
     id: 2,
     title: "Mobile Unity Game",
     description: "A mobile pixel-art endless runner made in Unity. With different types of enemy mobs, levels and bosses. Pre-Alpha is out.",
-    image: "/images/ninja.png",
+    image: "/images/idle_down.png",
     tags: ["Unity", "C#", "Mobile"],
-    inDevelopment: true
+    inDevelopment: true,
+    sprite: true
 
   },
   {

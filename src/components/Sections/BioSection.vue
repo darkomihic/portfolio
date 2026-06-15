@@ -13,7 +13,19 @@ const emit = defineEmits(['switch-section'])
         <div class="profile-image">
           <h2 class="name-mobile">Darko Mihić</h2>
           <!-- Add your photo here - replace the src path -->
-          <img src="/public/darko2.PNG" alt="Darko Mihić" />
+          <!-- Hover the avatar: the photo flips to the MD logo, then "MD" smiles into ":D" -->
+          <div class="avatar">
+            <div class="avatar-inner">
+              <img class="avatar-face avatar-photo" src="/public/darko2.PNG" alt="Darko Mihić" />
+              <div class="avatar-face avatar-badge" aria-hidden="true">
+                <span class="logo-m">
+                  <span class="logo-m-front">M</span>
+                  <span class="logo-m-back">:</span>
+                </span>
+                <span class="logo-d">D</span>
+              </div>
+            </div>
+          </div>
           <h2 class="name-desktop">Darko Mihić</h2>
         </div>
         <div class="bio-text">
@@ -122,14 +134,123 @@ const emit = defineEmits(['switch-section'])
   text-align: center;
 }
 
-.profile-image img {
+.avatar {
+  position: relative;
   width: 250px;
   height: 250px;
+  margin-top: 1rem;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+/* The flip card: photo on the front, MD badge on the back */
+.avatar-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.34, 1.45, 0.5, 1);
+}
+
+.avatar:hover .avatar-inner {
+  transform: rotateY(180deg);
+}
+
+.avatar-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  object-fit: cover;
   border: 4px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  margin-top: 1rem;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.avatar-photo {
+  object-fit: cover;
+}
+
+/* MD badge — the back of the card, recreating the logo so it can animate */
+.avatar-badge {
+  transform: rotateY(180deg);
+  background: radial-gradient(circle at 50% 38%, #fff7c8 0%, #ffef9e 70%, #f5e58a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial Black', 'Segoe UI', system-ui, sans-serif;
+  font-weight: 900;
+  font-size: 6.5rem;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #0a1846;
+  overflow: hidden;
+  transition: box-shadow 0.4s ease;
+}
+
+.avatar:hover .avatar-badge {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 42px rgba(255, 240, 158, 0.6);
+}
+
+/* "M" tumbles away, ":" tumbles in to form the :D smile */
+.logo-m {
+  position: relative;
+  display: inline-block;
+  width: 0.72em;
+  height: 1em;
+  perspective: 320px;
+}
+
+.logo-m-front,
+.logo-m-back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: transform 0.45s cubic-bezier(0.34, 1.45, 0.5, 1), opacity 0.3s ease;
+}
+
+.logo-m-back {
+  transform: rotateX(-90deg);
+  opacity: 0;
+}
+
+.avatar:hover .logo-m-front {
+  transform: rotateX(90deg);
+  opacity: 0;
+  transition-delay: 0.55s;
+}
+
+.avatar:hover .logo-m-back {
+  transform: rotateX(0deg);
+  opacity: 1;
+  transition-delay: 0.68s;
+}
+
+/* Slide the D in to hug the colon so it reads as a face.
+   Matches the M's centered 1em box so both glyphs align vertically. */
+.logo-d {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1em;
+  margin-left: -0.08em; /* close the gap left by the M's box */
+  transition: transform 0.4s ease 0.55s;
+}
+
+.avatar:hover .logo-d {
+  transform: translateX(-0.14em);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avatar-inner,
+  .logo-m-front,
+  .logo-m-back,
+  .logo-d { transition-duration: 0.001s; }
 }
 
 .bio-text {
@@ -234,9 +355,13 @@ const emit = defineEmits(['switch-section'])
     padding: 1.5rem;
   }
 
-  .profile-image img {
+  .avatar {
     width: 150px;
     height: 150px;
+  }
+
+  .avatar-badge {
+    font-size: 3.7rem;
   }
 
   .name-desktop {

@@ -1,6 +1,13 @@
 <template>
   <div class="project-card">
-    <img v-if="image" :src="image" :alt="title" />
+    <img v-if="image && !sprite" :src="image" :alt="title" />
+    <div
+      v-else-if="image && sprite"
+      class="ninja-sprite"
+      :style="{ backgroundImage: `url('${image}')` }"
+      role="img"
+      :aria-label="title"
+    ></div>
     <div class="content">
       <h3>{{ title }}</h3>
       <p v-html="description"></p>
@@ -36,6 +43,10 @@ defineProps({
     type: Boolean,
     default: false
   },
+  sprite: {
+    type: Boolean,
+    default: false
+  },
 });
 </script>
 
@@ -61,6 +72,31 @@ img {
   object-position: center;
   flex-shrink: 0;
   padding: 1rem 1rem 0.3rem 1rem;
+}
+
+/* Animated pixel-art sprite sheet (e.g. the Unity ninja idle).
+   Sheet is 5 frames of 48x64; we scale it and step one frame at a time. */
+.ninja-sprite {
+  --frame-w: 120px;
+  display: inline-block;
+  vertical-align: top;
+  flex-shrink: 0;
+  width: var(--frame-w);
+  aspect-ratio: 48 / 64;
+  margin: 1rem 1rem 0.3rem 1rem;
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-size: calc(var(--frame-w) * 5) 100%;
+  image-rendering: pixelated; /* keep the pixels crisp when scaled up */
+  animation: ninjaIdle 1s steps(5) infinite;
+}
+
+@keyframes ninjaIdle {
+  to { background-position-x: calc(var(--frame-w) * -5); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ninja-sprite { animation: none; }
 }
 
 .content {
@@ -157,6 +193,11 @@ a:hover {
     height: 20%;
     margin: 0;
     padding: 1rem;
+  }
+
+  .ninja-sprite {
+    --frame-w: 78px;
+    margin: 1rem;
   }
 
   .content {
