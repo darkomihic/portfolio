@@ -47,7 +47,7 @@ const projects = [
     description: "Website that is used to track payments and calculate tax for Serbian Freelancers",
     image: '/images/tax.png', // Direct public path     
     tags: ["Laravel"],
-    link: "https://https://porez-kalkulator.rs/",
+    link: "https://porez-kalkulator.rs/",
   },
   {
     id: 3,
