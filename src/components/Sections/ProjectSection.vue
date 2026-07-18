@@ -24,6 +24,14 @@ import ProjectCard from './ProjectCard.vue'
 
 const projects = [
   {
+    id: 8,
+    title: "Shipbling",
+    description: "Shipbling is a Singapore-based e-commerce platform for jewelry manufacturers and resellers. It allows users to easily manage multiple online stores, providing them with a product catalog, order management, and inventory synchronization across different e-commerce platforms. I am currently working on engineering a multi-store sync system between Shopify and Shopee, covering product publishing, order ingestion, and real-time inventory updates.",
+    image: '/images/Shipbling.png', // Direct public path     
+    tags: ["Node.js", "React", "MySQL"],
+    link: "https://shipbling.com",
+  },  
+  {
     id: 1,
     title: "Kosa-Nostra Barber Shop Website",
     description: "Website built for a local barbershop. Includes online scheduling, barber dashboard and integrated Google calendar. Supports multiple barbers with different working hours. Currently working on a Telegram bot for appointment notifications.",

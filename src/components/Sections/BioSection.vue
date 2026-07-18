@@ -31,10 +31,14 @@ const emit = defineEmits(['switch-section'])
         <div class="bio-text">
           <h1>About me</h1>
           <p>
-            Final-year student at the Faculty of Technical Sciences, University of Novi Sad, eager to grow as a software developer.
-            I am particularly interested in building information systems, exploring different web technologies, modeling databases, and data analysis.
-            I am flexible, a strong team player, and equally effective working independently.
-            I also have experience working remotely and thrive in environments with motivated colleagues and experienced mentors for professional growth.
+            Freelance fullstack web developer specializing in React, Node.js, and PostgreSQL,
+            currently open to new clients and projects.
+            I build complete web solutions — from database modeling and REST APIs to responsive frontends —
+            with hands-on experience in e-commerce platforms, third-party integrations (Shopify, payment and shipping APIs),
+            and deploying applications on Linux servers.
+            I am particularly interested in building information systems, exploring web technologies, and data analysis.
+            Flexible and communicative, I work well both independently and in a team,
+            and have several years of experience collaborating remotely with international clients.
           </p>
           <p class="personal-note">
             <!-- Add personal details here - customize this section -->
@@ -149,7 +153,7 @@ const emit = defineEmits(['switch-section'])
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: transform 0.7s cubic-bezier(0.34, 1.45, 0.5, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 .avatar:hover .avatar-inner {
@@ -185,7 +189,6 @@ const emit = defineEmits(['switch-section'])
   line-height: 1;
   letter-spacing: -0.04em;
   color: #0a1846;
-  overflow: hidden;
   transition: box-shadow 0.4s ease;
 }
 
@@ -193,13 +196,12 @@ const emit = defineEmits(['switch-section'])
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 42px rgba(255, 240, 158, 0.6);
 }
 
-/* "M" tumbles away, ":" tumbles in to form the :D smile */
+/* "M" fades out, ":" fades in to form the :D smile */
 .logo-m {
   position: relative;
   display: inline-block;
   width: 0.72em;
   height: 1em;
-  perspective: 320px;
 }
 
 .logo-m-front,
@@ -209,26 +211,21 @@ const emit = defineEmits(['switch-section'])
   display: flex;
   align-items: center;
   justify-content: center;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transition: transform 0.45s cubic-bezier(0.34, 1.45, 0.5, 1), opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .logo-m-back {
-  transform: rotateX(-90deg);
   opacity: 0;
 }
 
 .avatar:hover .logo-m-front {
-  transform: rotateX(90deg);
   opacity: 0;
-  transition-delay: 0.55s;
+  transition-delay: 0.6s;
 }
 
 .avatar:hover .logo-m-back {
-  transform: rotateX(0deg);
   opacity: 1;
-  transition-delay: 0.68s;
+  transition-delay: 0.8s;
 }
 
 /* Slide the D in to hug the colon so it reads as a face.
