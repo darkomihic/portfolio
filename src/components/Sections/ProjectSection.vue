@@ -32,6 +32,22 @@ const projects = [
     link: "https://shipbling.com",
   },  
   {
+    id: 9,
+    title: "Teeny Studio",
+    description: "Teeny Studio is a Belgrade-based design studio specializing in brand strategy, brand design, and product design. I worked closely with the studio's designer to bring their vision to life, translating the designs into a responsive, pixel-perfect website.",
+    image: '/images/TeenyLogo.svg', // Direct public path     
+    tags: ["React"],
+    link: "https://teeny.studio",
+  },  
+    {
+    id: 10,
+    title: "Sunnie",
+    description: "Sunnie is an app for baristas and coffee lovers. Coming soon.",
+    image: '/images/SunnieLogo.svg', // Direct public path     
+    tags: ["Expo", "React Native", "Supabase"],
+    inDevelopment: true
+  },  
+  {
     id: 1,
     title: "Kosa-Nostra Barber Shop Website",
     description: "Website built for a local barbershop. Includes online scheduling, barber dashboard and integrated Google calendar. Supports multiple barbers with different working hours. Currently working on a Telegram bot for appointment notifications.",
