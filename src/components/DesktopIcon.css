@@ -1,0 +1,58 @@
+.desktop-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 96px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.desktop-icon-image {
+  display: block;
+  width: 96px;
+  height: 96px;
+}
+
+.desktop-icon-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.desktop-icon-label {
+  padding: 0 2px;
+  white-space: nowrap;
+}
+
+/* Windows-style selection highlight while the icon has focus. */
+.desktop-icon:focus-visible .desktop-icon-image {
+  filter: sepia(1) hue-rotate(190deg) saturate(4) brightness(0.7);
+}
+
+.desktop-icon:focus-visible .desktop-icon-label {
+  background: var(--title-start);
+  outline: 1px dotted #fff;
+}
+
+/* Smaller variant used inside the Project Explorer. */
+.desktop-icon--file {
+  color: #000;
+  font-size: 10px;
+}
+
+.desktop-icon--file .desktop-icon-label {
+  margin-top: 8px;
+  white-space: normal;
+}
+
+.desktop-icon--file:focus-visible .desktop-icon-label {
+  color: #fff;
+  outline-color: #000;
+}

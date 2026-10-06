@@ -1,0 +1,323 @@
+/* Shared: keep the button row pinned and scroll the content above it. */
+.panel:has(> .button-row) {
+  overflow: hidden;
+}
+
+.panel > .button-row {
+  flex-shrink: 0;
+  margin-top: auto;
+  padding: 10px 0 2px;
+}
+
+.profile,
+.experience,
+.project {
+  min-height: 0;
+  max-height: 440px;
+  overflow-y: auto;
+}
+
+/* About me / Tutoring / Education */
+.profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.profile-image {
+  flex-shrink: 0;
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  background: var(--placeholder);
+}
+
+.profile-image--icon {
+  object-fit: contain;
+  background: none;
+}
+
+.profile-copy {
+  flex: 1;
+  min-width: 0;
+  padding-right: 4px;
+}
+
+/* My experience */
+.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.experience-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.experience-logo {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+}
+
+.experience .heading {
+  margin-top: 4px;
+}
+
+.experience-copy {
+  max-width: 452px;
+  text-align: left;
+}
+
+/* Project Explorer */
+.explorer-address {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 4px 4px;
+  user-select: none;
+}
+
+.explorer-address-field {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  width: 86px;
+  height: 16px;
+  padding: 0 3px;
+  background: #fff;
+  box-shadow: var(--bevel-sunken);
+  font-size: 10px;
+}
+
+.explorer-address-field img {
+  width: 10px;
+  height: 10px;
+  image-rendering: pixelated;
+}
+
+.explorer-address-arrow {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #000;
+  background: var(--surface);
+}
+
+.explorer-address-arrow::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #000;
+}
+
+.explorer {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  gap: 24px 70px;
+  padding: 16px;
+}
+
+.desktop-icon--file .desktop-icon-image img {
+  image-rendering: pixelated;
+}
+
+.sprite {
+  display: block;
+  height: 100%;
+  aspect-ratio: 3 / 4;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 500% 100%;
+  image-rendering: pixelated;
+  animation: sprite-idle 0.9s steps(5, jump-none) infinite;
+}
+
+@keyframes sprite-idle {
+  from {
+    background-position: 0% 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+/* ProjectDetails */
+.project {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.project-copy {
+  flex: 1;
+  min-width: 0;
+  max-width: 380px;
+}
+
+.project-image {
+  flex-shrink: 0;
+  width: 164px;
+  height: 164px;
+  margin-left: auto;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+/* Contact me Wizard */
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 381px;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 16px 10px;
+}
+
+.contact-art {
+  justify-self: center;
+  width: 152px;
+  height: 291px;
+  border: 1px solid #000;
+  /* Crops the teal illustration panel out of the classic "Internet Mail" wizard screenshot. */
+  background: url('/ui/contact-wizard.png') -19px -39px / 555px auto no-repeat;
+  image-rendering: pixelated;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.contact-title {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.contact-intro {
+  max-width: 370px;
+  text-align: center;
+}
+
+.contact-field {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 700;
+}
+
+.contact-field input {
+  width: 120px;
+  height: 16px;
+  padding: 0 3px;
+  border: 1px solid #000;
+  border-radius: 0;
+  background: #fff;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.contact-field--message {
+  align-self: stretch;
+  align-items: flex-start;
+}
+
+.contact-field textarea {
+  flex: 1;
+  height: 160px;
+  padding: 3px;
+  border: 1px solid #000;
+  border-radius: 0;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  resize: none;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  outline: 1px dotted #000;
+  outline-offset: 1px;
+}
+
+.contact-send {
+  margin-top: 4px;
+}
+
+.contact-window .window-status {
+  margin: 0 4px 2px;
+  border-top: 1px solid #808080;
+  box-shadow: inset 0 1px 0 #fff;
+}
+
+.contact-status--error {
+  color: #a00000;
+}
+
+.contact-status--sent {
+  color: #006400;
+}
+
+/* Phone layout */
+.window--mobile .profile,
+.window--mobile .experience,
+.window--mobile .project {
+  max-height: none;
+}
+
+.window--mobile .profile-image {
+  width: 72px;
+  height: 72px;
+}
+
+.window--mobile .project {
+  gap: 12px;
+}
+
+.window--mobile .project-image {
+  width: min(142px, 40%);
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.window--mobile .explorer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  overflow-y: auto;
+}
+
+.window--mobile.contact-window .window-body {
+  overflow-y: auto;
+}
+
+.window--mobile .contact {
+  grid-template-columns: 1fr;
+  padding: 12px 8px;
+}
+
+.window--mobile .contact-art {
+  display: none;
+}
+
+.window--mobile .contact-field input,
+.window--mobile .contact-field textarea {
+  /* 16px stops iOS Safari from zooming into the field on focus. */
+  font-size: 16px;
+}
+
+.window--mobile .contact-field input {
+  width: 180px;
+  height: 22px;
+}
