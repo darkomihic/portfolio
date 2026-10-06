@@ -122,7 +122,7 @@ export const projects: Project[] = [
     stack: ['Unity', 'C#', 'Mobile'],
     inDevelopment: true,
   },
-  {
+  /*{
     id: 'portfolio',
     name: 'Portfolio website',
     title: 'Portfolio Website',
@@ -130,7 +130,7 @@ export const projects: Project[] = [
     image: '/projects/portfolio.png',
     stack: ['React'],
     link: 'https://mihic.dev',
-  },
+  },*/
   {
     id: 'design-patterns',
     name: 'University project',
