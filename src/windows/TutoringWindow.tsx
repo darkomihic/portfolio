@@ -3,11 +3,7 @@ import type { WindowId } from './types'
 
 type TutoringWindowProps = WindowChromeProps & { onOpen: (id: WindowId) => void }
 
-const scratchLink = (
-  <a href="https://www.scratchfoundation.org/home" target="_blank" rel="noopener noreferrer">
-    Scratch
-  </a>
-)
+
 
 export default function TutoringWindow({ onOpen, ...chrome }: TutoringWindowProps) {
   return (
