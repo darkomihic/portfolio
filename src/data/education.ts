@@ -17,7 +17,7 @@ export const schools: School[] = [
     date: '2016 - 2020',
     logo: '/logos/mihajlo-pupin.png',
     description:
-      'Graduated with honors in Computer Technician program. Gained foundational knowledge in hardware, software, and networking.',
+      'Since I was a kid I was interested in computers and technology, which led me to study at the Mihajlo Pupin Electrotechnical school in Novi Sad. I graduated with honors in Computer Technician program. Gained foundational knowledge in hardware, software, and networking.',
   },
   {
     id: 'university',

@@ -123,6 +123,14 @@ img {
   line-height: normal;
 }
 
+.copy .services {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .copy h3 {
   margin: 4px 0 0;
   font-size: 12px;

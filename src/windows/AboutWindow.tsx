@@ -13,14 +13,48 @@ export default function AboutWindow({ onOpen, ...chrome }: AboutWindowProps) {
             <h1 className="heading">Darko Mihić</h1>
             <p className="subheading">Freelance Web Developer</p>
             <p>
-              Freelance fullstack web developer specializing in React, Node.js, and PostgreSQL, currently open
-              to new clients and projects. I build complete web solutions — from database modeling and REST
-              APIs to responsive frontends — with hands-on experience in e-commerce platforms, third-party
-              integrations (Shopify, payment and shipping APIs), and deploying applications on Linux servers. I
-              am particularly interested in building information systems, exploring web technologies, and data
-              analysis. Flexible and communicative, I work well both independently and in a team, and have
-              several years of experience collaborating remotely with international clients.
+              I'm a freelance fullstack web developer specializing in React, Node.js and PostgreSQL, and I'm
+              currently open to new clients and projects.
             </p>
+            <p>
+              I handle the whole process, from the first sketch to the live site: design, development and
+              deployment. Whether you need a clean portfolio website, a
+              Shopify store, or a custom web app built to streamline and grow your business, I build solutions
+              that look good, work well and are made to last.
+            </p>
+            <p>
+              You don't need a fully defined plan to get started. If you only have a rough idea, I'll help turn
+              it into a clear direction. I'll ask the right questions, suggest what will actually make a
+              difference, and help shape the project before any code is written. If you want to improve your web
+              presence, attract more customers, or finally build the app idea you've been thinking about, I can
+              help you get there.
+            </p>
+            <h3>Services</h3>
+            <ul className="services">
+              <li>
+                <strong>Portfolio &amp; business websites:</strong> Fast, modern, responsive sites that make a
+                strong first impression.
+              </li>
+              <li>
+                <strong>Custom web applications:</strong> Full-stack apps built with React, Node.js and PostgreSQL
+                to automate work and help your business grow.
+              </li>
+              <li>
+                <strong>Shopify stores:</strong> Store setup, customization and improvements to help you sell
+                more.
+              </li>
+              <li>
+                <strong>UI/UX design:</strong> Clean, user-focused design that makes the most of your brand.
+              </li>
+              <li>
+                <strong>Deployment &amp; launch:</strong> Hosting, domains and getting your project live and
+                running smoothly.
+              </li>
+              <li>
+                <strong>Consulting &amp; idea development:</strong> Not sure what you need? I'll help you plan it,
+                scope it and bring it to life.
+              </li>
+            </ul>
             <p>
               Based in Novi Sad, Serbia. When I'm not coding, I enjoy playing sports, especially basketball, and
               I also like hiking. I'm also an avid gamer, which naturally led me to explore game development. I
@@ -46,6 +80,10 @@ export default function AboutWindow({ onOpen, ...chrome }: AboutWindowProps) {
                 GitHub
               </a>
               .
+            </p>
+            <p>
+              <strong>Let's talk about what you're building.</strong> Click the <strong>Contact me</strong> button
+              below to get in touch.
             </p>
           </div>
         </div>

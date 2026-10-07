@@ -19,21 +19,16 @@ export default function TutoringWindow({ onOpen, ...chrome }: TutoringWindowProp
             <h1 className="heading">Tutoring</h1>
             <p className="subheading">Programming lessons for young learners</p>
             <p>
-              I have a strong passion towards teaching. For the past year I have been teaching at an online
-              school and also offer my own private sessions. I have experience working with students ages 8-15
+              I have a strong passion towards teaching. For multiple years I have been teaching at an online
+              school and also offer my own private sessions. I have experience working with students ages 8-18
               and also SEN students. I have experience in many programming languages, including C#, Java,
-              JavaScript, C, etc. However, for the younger learners I recommend learning {scratchLink}.
+              JavaScript, C, etc. 
             </p>
             <p>
               Coming from a family with a background in education I have had the chance to learn from amazing
               teachers and I use all of that knowledge in my lessons. My main goal is to showcase all of the
               amazing details in programming to the young learners, making them interested and willing to learn
               from lesson to lesson.
-            </p>
-            <h3>Scratch Course</h3>
-            <p>
-              I am currently building my own {scratchLink} course! I recommend this course to all of the young
-              students who don't have any experience, as it is an amazing language meant for them.
             </p>
             <h3>Personalized lessons</h3>
             <p>
