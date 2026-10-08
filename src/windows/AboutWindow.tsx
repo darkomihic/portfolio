@@ -64,13 +64,13 @@ export default function AboutWindow({ onOpen, ...chrome }: AboutWindowProps) {
             </p>
             <h3>Currently building</h3>
             <p>
-              Working on Shipbling, a Singapore-based e-commerce platform — engineering a multi-store sync
+              Working on Shipbling, a Singapore-based e-commerce platform - engineering a multi-store sync
               system between Shopify and Shopee, covering product publishing, order ingestion, and real-time
               inventory updates. Also finishing my bachelor's thesis.
             </p>
             <h3>Open to freelance</h3>
             <p>
-              Currently freelancing full-time, but open to additional freelance opportunities — especially web
+              Currently freelancing full-time, but open to additional freelance opportunities, especially web
               projects, custom applications, or consulting. You can also find me on{' '}
               <a href="https://www.linkedin.com/in/darko-mihic/" target="_blank" rel="noopener noreferrer">
                 LinkedIn
